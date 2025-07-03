@@ -176,7 +176,7 @@ if not st.session_state.questions_df.empty:
             st.session_state.wrong_questions.append({
                 "question": question_row['question'],
                 "user_answer": "Time's up",
-                "correct_answer": options[int(ord(question_row['correct_answer']) - ord('A')],
+                "correct_answer": options[int(ord(question_row['correct_answer']) - ord('A'))],
                 "explanation": question_row['explanation'],
                 "difficulty": question_row['difficulty']
             })
