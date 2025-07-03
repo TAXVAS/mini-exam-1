@@ -4,7 +4,7 @@ import streamlit as st
 def check_password():
     """Επιστρέφει True αν ο χρήστης έχει τον σωστό κωδικό"""
     def password_entered():
-        if st.session_state["password"] == st.secrets["password"]:
+        if st.session_state["PASSWORD"] == st.secrets["PASSWORD"]:
             st.session_state["password_correct"] = True
             del st.session_state["password"]  # Δεν αποθηκεύουμε τον κωδικό
         else:
