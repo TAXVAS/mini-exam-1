@@ -190,7 +190,7 @@ if not st.session_state.questions_df.empty:
         st.header("Quiz Completed!")
         correct_count = sum([1 for i, ans in st.session_state.answers.items()] )
         if ans != "Time's up" and ans == filtered_df.iloc[i]['option_' + filtered_df.iloc[i]['correct_answer'].lower()]:     
-        total_questions = len(filtered_df)
+            total_questions = len(filtered_df)
         st.subheader(f"Score: {correct_count}/{total_questions} ({correct_count/total_questions*100:.1f}%)")
         st.write(f"Total time: {st.session_state.total_time} seconds")
         # Show wrong answers with explanations
