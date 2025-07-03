@@ -188,7 +188,7 @@ if not st.session_state.questions_df.empty:
     # Show results at the end
     elif st.session_state.current_index >= len(filtered_df) and len(filtered_df) > 0:
         st.header("Quiz Completed!")
-        correct_count = sum([1 for i, ans in st.session_state.answers.items() 
+        correct_count = sum([1 for i, ans in st.session_state.answers.items()] 
                             if ans != "Time's up" and ans == filtered_df.iloc[i]['option_' + filtered_df.iloc[i]['correct_answer'].lower()]
         total_questions = len(filtered_df)
         st.subheader(f"Score: {correct_count}/{total_questions} ({correct_count/total_questions*100:.1f}%)")
