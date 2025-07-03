@@ -149,7 +149,7 @@ if not st.session_state.questions_df.empty:
         if st.button("Submit Answer"):
             st.session_state.answers[st.session_state.current_index] = user_choice
             # Check if answer is correct
-            correct_answer = options[int(ord(question_row['correct_answer']) - ord('A')]
+            correct_answer = options[int(ord(question_row['correct_answer']) - ord('A'))]
             is_correct = user_choice == correct_answer
             time_spent = st.session_state.time_per_question - st.session_state.time_left
             st.session_state.total_time += time_spent
